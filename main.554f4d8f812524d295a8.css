@@ -1,0 +1,151 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+
+
+
+
+body{
+    font-family: "Noto Serif", serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'header'
+    'main';
+    height: 100vh;
+}
+
+.head{
+    grid-area:header ;
+    background-color: #144C52;
+
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 45%;
+    margin-right: 55%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#heading{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.main{
+    grid-area: main;
+    background-color: #ADCCC7;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 9fr;
+}
+
+.input{
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+}
+
+.material-symbols-outlined{
+    font-size: 48px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.tempCard{
+    font-size: 25px;
+    background-color: #D34C26;
+    border: 15px solid #D34C26;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    max-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-top: 2rem;
+}
+
+.gif{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 12rem;
+    height: 6rem;
+    border-radius: 100px 100px 0 0;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+  }
+  .loader:before {
+    content: "";
+    position: absolute;
+    inset: 0 0 -100%;
+    background: 
+      radial-gradient(farthest-side,#ffd738 80%,#0000) left 70% top    20%/15px 15px,
+      radial-gradient(farthest-side,#020308 92%,#0000) left 65% bottom 19%/12px 12px,
+      radial-gradient(farthest-side,#ecfefe 92%,#0000) left 70% bottom 20%/15px 15px,
+      linear-gradient(#9eddfe 50%,#020308 0);
+    background-repeat: no-repeat;
+    animation: l5 2s infinite;
+  }
+  @keyframes l5 {
+    0%,20%   {transform: rotate(0)}
+    40%,60%  {transform: rotate(.5turn)}
+    80%,100% {transform: rotate(1turn)}
+  }
+  
+
+/*# sourceMappingURL=main.554f4d8f812524d295a8.css.map*/
