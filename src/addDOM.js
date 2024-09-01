@@ -34,7 +34,6 @@ export function onSubmit(){
 
 function getCity(){
     const location = document.querySelector('input');
-    console.log(location.value);
     return location.value;
 }
 
