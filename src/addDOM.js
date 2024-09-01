@@ -7,6 +7,8 @@ const images = require.context('./WeatherIcons-main/WeatherIcons-main/SVG/4th Se
 
 export function onSubmit(){
     const submitBtn = document.querySelector('#location');
+    const loader = document.querySelector('.loader');
+    loader.style.display = 'none';
     submitBtn.addEventListener('click',getData(getCity()));
 }
 
