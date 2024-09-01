@@ -1,7 +1,6 @@
 import { getData } from ".";
 import { capitalizeFirstLetter } from "./helper";
 import './style.css';
-import { fetchGif } from ".";
 
 const images = require.context('./WeatherIcons-main/WeatherIcons-main/SVG/4th Set - Color', true, /\.(png|jpg|svg)$/);
 
@@ -17,7 +16,6 @@ export function onSubmit(){
                 reset();
                 loader.style.display = loader.style.display === 'none' ? '' : 'none';
                 const weatherData = await getData(city);
-                console.log(weatherData);
                 loader.style.display = loader.style.display === 'none' ? '' : 'none';
                 if(!weatherData){
                     display();
