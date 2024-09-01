@@ -82,20 +82,21 @@ export function createCard(obj){
 }
 
 
-export function display(url){
+export function display(url) {
+    const main = document.querySelector('.display');
+    const card = document.createElement('div');
+    const address = document.createElement('div');
 
-    const display = document.querySelector('.display');
-    if (display.lastChild && display.lastChild.nodeName.toLowerCase() === 'img') {
-        // If it does, use that image
-        display.removeChild(display.lastChild);
-    } else {
-        // If not, create a new image
-        const image = document.createElement('img');
-        image.classList.add('gif')
-        image.src = url;
-        display.appendChild(image);    }
+    address.textContent = 'Not A Valid City';
+    address.style.fontSize = '3rem';
+
+    card.appendChild(address);
+    card.classList.add('tempCard');
+    main.appendChild(card);
+
 
 }
+
 
 function reset(){
     const display = document.querySelector('.display');
