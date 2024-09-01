@@ -97,7 +97,7 @@ export function display(url) {
 
 function reset(){
     const display = document.querySelector('.display');
-    if(display.lastChild ){
+    if(display.lastChild && display.lastChild.className == 'tempCard'){
         display.removeChild(display.lastChild);
     }
 }
