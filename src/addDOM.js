@@ -3,6 +3,7 @@ import { capitalizeFirstLetter } from "./helper";
 import './style.css';
 import { fetchGif } from ".";
 
+const images = require.context('./WeatherIcons-main/WeatherIcons-main/SVG/4th Set - Color', true, /\.(png|jpg|svg)$/);
 
 export function onSubmit(){
     const submitBtn = document.querySelector('#location');
