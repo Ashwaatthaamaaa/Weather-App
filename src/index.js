@@ -1,6 +1,4 @@
 import { onSubmit } from "./addDOM";
-import { createCard } from "./addDOM";
-import { display } from "./addDOM";
 import './style.css';
 
 export async function getData(city) {
