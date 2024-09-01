@@ -1,4 +1,7 @@
 import { getData } from ".";
+import { capitalizeFirstLetter } from "./helper";
+import './style.css';
+import { fetchGif } from ".";
 
 
 export function onSubmit(){
