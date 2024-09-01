@@ -20,9 +20,7 @@ export function onSubmit(){
                 console.log(weatherData);
                 loader.style.display = loader.style.display === 'none' ? '' : 'none';
                 if(!weatherData){
-                    const url = await fetchGif();
-                    console.log(url);
-                    display(url);
+                    display();
                 }else{
                     createCard(weatherData);
                 }
