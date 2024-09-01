@@ -9,7 +9,31 @@ export function onSubmit(){
     const submitBtn = document.querySelector('#location');
     const loader = document.querySelector('.loader');
     loader.style.display = 'none';
-    submitBtn.addEventListener('click',getData(getCity()));
+    submitBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        let city = getCity();
+        if (city !== "" && city) {
+            try {
+                reset();
+                loader.style.display = loader.style.display === 'none' ? '' : 'none';
+                const weatherData = await getData(city);
+                console.log(weatherData);
+                loader.style.display = loader.style.display === 'none' ? '' : 'none';
+                if(!weatherData){
+                    const url = await fetchGif();
+                    console.log(url);
+                    display(url);
+                }else{
+                    createCard(weatherData);
+                }
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
+                // Handle the error appropriately (e.g., show an error message to the user)
+            }
+        } else {
+            console.log('Enter a location');
+        }
+    });
 }
 
 function getCity(){
